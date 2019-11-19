@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ButtonBox</string>
+    <string name="searching_for_servers">Looking for servers…</string>
+    <string name="select_server">Select a server</string>
+    <string name="retry_search">Retry search</string>
+    <string name="no_servers">No servers found</string>
+</resources>
