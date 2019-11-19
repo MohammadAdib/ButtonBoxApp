@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">ButtonBox</string>
-    <string name="searching_for_servers">Looking for servers…</string>
-    <string name="select_server">Select a server</string>
-    <string name="retry_search">Retry search</string>
-    <string name="no_servers">No servers found</string>
+    <string name="info">ButtonBox is an app for Sim Racers to control their gaming experience through the phone by simulating keyboard key presses. To edit the key bindings, hold down on any of the buttons.\n\nDownload the ButtonBox server from https://bit.ly/ButtonBoxServer and connect your phone to the same network.\n\nEnjoy!</string>
+    <string name="no_server_found">No server found</string>
+    <string name="download_server">Download the ButtonBox server from https://bit.ly/ButtonBoxServer and connect your phone to the same network</string>
+    <string name="retry">Retry</string>
+    <string name="not_connected">Not connected</string>
 </resources>

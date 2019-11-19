@@ -239,11 +239,29 @@
         android:id="@+id/info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:alpha="0.5"
         android:background="?selectableItemBackgroundBorderless"
+        android:onClick="displayInfo"
         android:padding="@dimen/padding_med"
         android:src="@drawable/ic_info"
-        android:alpha="0.5"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/serverName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:background="?selectableItemBackgroundBorderless"
+        android:drawableLeft="@drawable/red_dot"
+        android:drawablePadding="@dimen/padding_small"
+        android:onClick="displayInfo"
+        android:padding="@dimen/padding_med"
+        android:text="@string/not_connected"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
