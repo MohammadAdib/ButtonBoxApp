@@ -60,12 +60,14 @@ class ButtonBoxApp : Application() {
 
     fun dispatchButtonPress(tag: String) {
         val code = getKeyCode(tag).toString()
-        Thread {
-            val socket = DatagramSocket()
-            val data = code.toByteArray()
-            val packet = DatagramPacket(data, data.size, ip ?: broadcast, port)
-            socket.send(packet)
-        }.start()
+        ip?.let {
+            Thread {
+                val socket = DatagramSocket()
+                val data = code.toByteArray()
+                val packet = DatagramPacket(data, data.size, ip, port)
+                socket.send(packet)
+            }.start()
+        }
     }
 
     fun startSearch() {

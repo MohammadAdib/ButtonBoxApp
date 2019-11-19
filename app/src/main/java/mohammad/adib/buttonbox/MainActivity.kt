@@ -21,6 +21,10 @@ class MainActivity : AppCompatActivity(), Observer<String> {
     private var vibrator: Vibrator? = null
     private var timer = Timer()
 
+    companion object {
+        var dialogShown = false
+    }
+
     @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,18 +43,8 @@ class MainActivity : AppCompatActivity(), Observer<String> {
             0
         )
         if (name.isNullOrEmpty()) {
-            if (serverDialog == null) {
-                val s = SpannableString(getString(R.string.download_server))
-                Linkify.addLinks(s, Linkify.ALL)
-                serverDialog = AlertDialog.Builder(this)
-                    .setTitle(getString(R.string.no_server_found))
-                    .setMessage(s)
-                    .create()
-            }
-            serverDialog?.let { if (!it.isShowing) it.show() }
-        } else {
-            serverDialog?.let { if (it.isShowing) it.dismiss() }
-        }
+            if (!dialogShown) showConnectivityDialog()
+        } else serverDialog?.let { if (it.isShowing) it.dismiss() }
     }
 
     fun buttonPress(v: View) {
@@ -60,7 +54,7 @@ class MainActivity : AppCompatActivity(), Observer<String> {
 
     fun displayInfo(v: View) {
         if (v.id == R.id.serverName) {
-            if (!ButtonBoxApp.instance.connected) serverDialog?.let { if (!it.isShowing) it.show() }
+            if (!ButtonBoxApp.instance.connected) showConnectivityDialog()
         } else {
             val s = SpannableString(getString(R.string.info))
             Linkify.addLinks(s, Linkify.ALL)
@@ -71,8 +65,26 @@ class MainActivity : AppCompatActivity(), Observer<String> {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        timer.cancel()
+    }
+
     private fun vibrate() {
         vibrator?.vibrate(25)
+    }
+
+    private fun showConnectivityDialog() {
+        if (serverDialog == null) {
+            val s = SpannableString(getString(R.string.download_server))
+            Linkify.addLinks(s, Linkify.ALL)
+            serverDialog = AlertDialog.Builder(this)
+                .setTitle(getString(R.string.no_server_found))
+                .setMessage(s)
+                .create()
+        }
+        serverDialog?.let { if (!it.isShowing) it.show() }
+        dialogShown = true
     }
 
     private class Heartbeat : TimerTask() {
