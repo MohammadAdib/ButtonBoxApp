@@ -1,6 +1,6 @@
 # ButtonBox - For Sim Racing & Games
 
-ButtonBox is an app for gamers to control their sim or game experience through the phone by simulating keyboard inputs.
+ButtonBox is an app for gamers to control their sim or game experience through the phone by simulating keyboard inputs. Simply attach it to your existing gaming hardware and peripherals for extra buttons and controls at your fingerprints.
 
 Download the server here: https://github.com/MohammadAdib/ButtonBoxServer
 
