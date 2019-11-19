@@ -5,4 +5,6 @@
     <string name="download_server">Download the ButtonBox server from https://bit.ly/ButtonBoxServer and connect your phone to the same network</string>
     <string name="retry">Retry</string>
     <string name="not_connected">Not connected</string>
+    <string name="done">Done</string>
+    <string name="choose_binding">Choose key binding</string>
 </resources>

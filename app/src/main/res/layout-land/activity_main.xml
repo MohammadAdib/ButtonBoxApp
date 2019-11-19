@@ -53,7 +53,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_med">
 
-                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    <mohammad.adib.buttonbox.SimButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="buttonPress"
@@ -76,7 +76,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_med">
 
-                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    <mohammad.adib.buttonbox.SimButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="buttonPress"
@@ -104,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_med">
 
-                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    <mohammad.adib.buttonbox.SimButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="buttonPress"
@@ -127,7 +127,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_med">
 
-                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    <mohammad.adib.buttonbox.SimButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="buttonPress"
@@ -164,7 +164,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center">
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                <mohammad.adib.buttonbox.SimButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_med"
@@ -174,7 +174,7 @@
                     app:backgroundTint="@color/red"
                     app:fabCustomSize="@dimen/button_size" />
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                <mohammad.adib.buttonbox.SimButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_med"
@@ -184,7 +184,7 @@
                     app:backgroundTint="@color/yellow"
                     app:fabCustomSize="@dimen/button_size" />
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                <mohammad.adib.buttonbox.SimButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_med"
@@ -200,7 +200,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                <mohammad.adib.buttonbox.SimButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_med"
@@ -210,7 +210,7 @@
                     app:backgroundTint="@color/red"
                     app:fabCustomSize="@dimen/button_size" />
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                <mohammad.adib.buttonbox.SimButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_med"
@@ -220,7 +220,7 @@
                     app:backgroundTint="@color/yellow"
                     app:fabCustomSize="@dimen/button_size" />
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                <mohammad.adib.buttonbox.SimButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/padding_med"

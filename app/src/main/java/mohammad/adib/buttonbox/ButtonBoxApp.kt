@@ -54,8 +54,17 @@ class ButtonBoxApp : Application() {
             .apply()
     }
 
-    private fun getKeyCode(tag: String): Int {
+    fun getKeyCode(tag: String): Int {
         return preferences.getInt(tag, 0)
+    }
+
+    fun updateBinding(tag: String, keyCode: Int): Boolean {
+        return if (preferences.all.values.contains(keyCode)) {
+            false
+        } else {
+            preferences.edit().putInt(tag, keyCode).apply()
+            true
+        }
     }
 
     fun dispatchButtonPress(tag: String) {
